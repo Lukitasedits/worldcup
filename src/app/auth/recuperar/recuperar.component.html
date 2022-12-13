@@ -1,0 +1,21 @@
+<app-spinner *ngIf="cargando"></app-spinner>
+<div class="fondo">
+  <div class="login-box">
+    <div class="titulo">Recuperar Contraseña</div>
+  <form (ngSubmit)="enviar()">
+    <div>
+      <label for="nombre">Nombre de Usuario:</label>
+      <input type="text" id="nombre" [(ngModel)]="dto.username" [ngModelOptions]="{standalone: true}" autocomplete="username">
+    </div>
+    <div>
+      <label for="mail">E-Mail:</label>
+      <input type="mail" id="mail" [(ngModel)]="dto.mailTo" [ngModelOptions]="{standalone: true}">
+    </div>
+    <input type="submit" value="ENVIAR" class="submit">
+  </form>
+  <app-pelota></app-pelota>
+  <ul class="errores" *ngIf="errores.length > 0">
+    <li *ngFor="let error of errores">{{error}}</li>
+  </ul>
+  </div>
+</div>

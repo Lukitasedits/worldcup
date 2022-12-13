@@ -1,0 +1,22 @@
+<div  [ngClass]="['figurita',
+                (thisFigurita.isHorizontal())?'figurita-horizontal':'figurita-vertical',
+                (abreviaturaPais == 'FWC')? ((thisFigurita.getCodigo()>=19)?'figurita-formacion':'figurita-especial'):'',
+                (isSeleccion)?'figurita-seleccion':'',
+                (thisFigurita.isDoble())? ((thisFigurita.getId() %2 ==0)? 'figurita-superior':'figurita-inferior'):'',
+                (abreviaturaPais == 'C')?'figurita-team-believers':'']"
+      #figuritaRef>
+
+  <div class="info-figurita" #informacionRef>
+    <h1>{{thisFigurita.getPais().getAbreviatura()}}</h1>
+    <h1>{{thisFigurita.getCodigo()}}</h1>
+    <h1 *ngIf="(isSeleccion) || (abreviaturaPais == 'C')" class="nombre"> {{thisFigurita.getNombre()}}</h1>
+  </div>
+  <div class="contador" *ngIf="cantidad>0">
+    {{cantidad}}
+  </div>
+  <div class="botones" #botones>
+    <div class="boton sumar" (click)="sumarCantidad()"></div>
+    <div class="boton restar" (click)="restarCantidad()"></div>
+  </div>
+  <div class="activador" (click)="updateFigurita(true)"></div>
+</div>

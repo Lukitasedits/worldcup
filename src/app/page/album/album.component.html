@@ -1,0 +1,71 @@
+<app-panel-scroll></app-panel-scroll>
+<div class="cover" #coverRef>
+  <div class="fondo">
+    <div class="boton_cerrar" (click)="goToMenu()"></div>
+    <h1 class="encabezado">Fifa world cup qatar 2022</h1>
+    <div class="separador">
+      <div class="rombo"></div>
+      <div class="linea"></div>
+      <div class="rombo"></div>
+    </div>
+
+    <div class="album">
+      <!--Especiales1-->
+      <div class="pagina" #paginaRef [id]="['pagina0']">
+        <div *ngFor="let figurita of figuritas[0]; let i = index">
+          <!--Simples-->
+          <app-sticker [figurita]="figurita" *ngIf="(!figurita.isDoble())"></app-sticker>
+          <!--Dobles-->
+          <div class="doble" *ngIf="(figurita.isDoble()) && i%2==0">
+            <!--Arriba-->
+            <app-sticker [figurita]="figuritas[0][i]"></app-sticker>
+            <div class="separador-dobles"></div>
+            <!--Abajo-->
+            <app-sticker [figurita]="figuritas[0][i+1]"></app-sticker>
+          </div>
+        </div>
+      </div>
+
+      <!--Selecciones-->
+      <div #paginaRef [id]="['pagina' + (1+s)]" *ngFor="let seleccion of figuritasSelecciones; let s = index" class="seleccion pagina" [ngStyle]="{'background-color':seleccion[0].getPais().getColor()}">
+        <div class="pais-info">
+          <div class="etiqueta">
+            <div class="bandera" [ngStyle]="{'background-image': 'url(/assets/banderas/' + seleccion[0].getPais().getBandera() +'.png)'}"></div>
+            <span>{{seleccion[0].getPais().getNombre()}}</span>
+          </div>
+        </div>
+        <div *ngFor="let figurita of seleccion;  let f = index">
+          <app-sticker [figurita]="figurita"></app-sticker>
+        <h1 class="iniciales">
+          {{seleccion[0].getPais().getAbreviatura()}}
+        </h1>
+      </div>
+    </div>
+    <!--Formaciones-->
+    <div class="pagina-formaciones" [id]="['pagina33']">
+      <div class="museum-info">
+        <div class="logo-fifa-museum"></div>
+        <h1>THE TIMELINE OF FIFA WORLD CUP™</h1>
+      </div>
+      <div class="separador-enc-figs"></div>
+      <div class="pagina">
+        <div *ngFor="let figurita of figuritas[33]">
+          <app-sticker [figurita]="figurita"></app-sticker>
+        </div>
+      </div>
+    </div>
+    <!--Team Believers-->
+    <div class="pagina-team-believers" >
+      <div class="team-believers-info">
+        <h1>TEAM BELIEVERS</h1>
+        <div class="logo-coca-cola"></div>
+      </div>
+      <div class="separador-enc-figs"></div>
+      <div class="figuritas-tbb pagina" [id]="['pagina34']">
+        <div *ngFor="let figurita of figuritas[34]">
+          <app-sticker [figurita]="figurita"></app-sticker>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

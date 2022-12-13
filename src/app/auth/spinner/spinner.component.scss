@@ -1,0 +1,28 @@
+.fondo{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.spinner{
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-image: url('/assets/imagenes/pelota-decorador.png');
+  animation: rotacion 1s ease-out infinite;
+}
+
+@keyframes rotacion {
+  from{
+    transform: rotateZ(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}

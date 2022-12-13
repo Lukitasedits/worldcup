@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Montserrat:wght@100&family=Roboto+Condensed&display=swap');
+
+//Figuritas en general
+.figurita{
+  cursor: pointer;
+  margin: 10px;
+  font-family: sans-serif;
+  color:  rgba(0, 0, 0, 0.408);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  .info-figurita{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: snow;
+    font-family: 'qatar';
+    position: absolute;
+
+    .nombre{
+      font-size: 80%;
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+    }
+
+  }
+
+  h1{
+    margin: 0px;
+  }
+}
+
+//Figuritas Epeciales
+.figurita-especial{
+  border: 6.5px solid #cb941c;
+  background-size: cover;
+}
+
+.figurita-especial:hover{
+  background-color: #770730;
+}
+
+//Figuritas Dobles (todas son especiales)
+.figurita-superior{
+  margin-bottom: 0;
+  border-bottom: 0;
+  margin-bottom: -7.5px;
+}
+
+
+.figurita-inferior{
+  margin-top: -7.5px;
+  border-top: 0;
+}
+
+
+//Figuritas verticales "Dimensión"
+.figurita-vertical{
+  width: 150px;
+  height: 200px;
+}
+
+//Figuritas horizontales "Dimensión"
+.figurita-horizontal{
+  width: 200px;
+  height: 150px;
+}
+
+//Figuritas NO especiales
+.figurita-seleccion{
+  cursor: pointer;
+  background-color: #e7bb2a;
+  box-shadow: 5px 5px #5e0525;
+  margin: 15px;
+  z-index: 1;
+}
+
+.figurita-seleccion:hover{
+  background-color: #ffd549;
+}
+
+.figurita-formacion{
+  background-color: rgb(117, 140, 195);
+
+  .info-figurita{
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-left: 5px;
+
+    h1{
+      margin: 5px;
+    }
+  }
+}
+
+.figurita-team-believers{
+  border: solid #000 1px;
+  border-bottom: rgba($color: #000000, $alpha: 0);
+  transition: 0.1s;
+
+  .info-figurita{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .nombre{
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.figurita-team-believers:hover{
+  background-color: rgba($color: #f6f6f6, $alpha: 0.4);
+}
+
+.figurita-formacion:hover{
+  background-color: rgb(98, 128, 188);
+}
+
+.botones{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  opacity: 0%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+  align-items: center;
+  justify-content: space-around;
+
+  transition: 0.1s;
+
+  .boton{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #dd3161;
+    border-radius: 50%;
+    margin: 5px;
+    opacity: 50%;
+    background-size: 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .boton:hover{
+    opacity: 100%;
+  }
+
+  .sumar{
+    background-image: url('/assets/botones/mas.png');
+  }
+
+  .restar{
+    background-image: url('/assets/botones/menos.png');
+  }
+}
+
+.botones:hover{
+  opacity: 100%;
+}
+
+.contador{
+  width: 30px;
+  height: 30px;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-radius: 50%;
+  margin: 5px;
+  color: snow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'qatar';
+  z-index: 3;
+}
+
+.activador{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+ // background-color: #000000;
+}

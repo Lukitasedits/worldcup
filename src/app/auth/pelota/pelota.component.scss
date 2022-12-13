@@ -1,0 +1,22 @@
+.pelota{
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-image: url('/assets/imagenes/pelota-decorador.png');
+  position: absolute;
+  animation: rotacion 10s linear infinite;
+  bottom: 50px;
+  left: 30px;
+  z-index: 0;
+}
+
+
+@keyframes rotacion {
+  from{
+    transform: rotateZ(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}

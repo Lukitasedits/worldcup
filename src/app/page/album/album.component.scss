@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Roboto+Condensed&display=swap');
+
+$color-decoraciones: #dd3161;
+
+.cover{
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  overflow-x: hidden;
+}
+
+.fondo{
+  //width: 100vw;
+  height: auto;
+  background-color: #5e0525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 80px;
+  overflow: hidden;
+  position: relative;
+
+  .boton_cerrar{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    margin: 20px;
+    background-image: url('/assets/botones/Btn_close.png');
+    z-index: 200;
+  }
+
+  h1{
+    color: snow;
+    font-family: 'qatar';
+    opacity: 90%;
+  }
+
+  .encabezado{
+    margin-top: -20px;
+  }
+
+  .separador{
+    width: 80vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .linea{
+      width: 70vw;
+      height: 5px;
+      background-color: #dd3161;
+    }
+
+    .rombo{
+      width: 25px;
+      height: 25px;
+      border-radius: 2px;
+      background-color: $color-decoraciones;
+      transform: rotate(45deg);
+    }
+  }
+
+  .album{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    //overflow-y: hidden;
+
+    .pagina{
+     //background-color: antiquewhite;
+      display: flex;
+      width: 100vw;
+      height: auto;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      padding-right: 40px;
+      position: relative;
+      transition: 0.2s all;
+
+      .doble{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .separador-dobles{
+          width: calc(100% - (15.5px * 2));
+          height: 15px;
+          background-size: cover;
+          background-position: center center;
+          background-image: url('/assets/imagenes/Separador figus.png');
+          z-index: 0;
+        }
+
+      }
+
+    }
+
+    .pagina-formaciones{
+      padding: 50px 0;
+      background-color: rgb(33, 33, 83);
+      margin-bottom: 10px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .museum-info{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        .logo-fifa-museum{
+          width: 150px;
+          height: 108px;
+          background-size: cover;
+          background-image: url('/assets/imagenes/logo_museo.png');
+          margin: 10px;
+        }
+
+      }
+
+    }
+
+    .pagina-team-believers{
+      width: 100vw;
+      background-size: cover;
+      background-position: center center;
+      background-image: url('/assets/imagenes/fondo-team-believers.jpg');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 35px;
+      padding-top: 15px;
+
+      .team-believers-info{
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+
+        .logo-coca-cola{
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          box-shadow: 2px 2px 5px #000;
+          margin: 25px;
+          background-size: cover;
+          background-image: url('/assets/imagenes/logo-coca-cola.png');
+        }
+
+        h1{
+          font-size: 50px;
+          text-shadow: 0 0 5px #000;
+        }
+      }
+
+      .figuritas-tbb{
+        max-width: 1000px;
+        height: auto;
+      }
+
+
+
+    }
+
+    .separador-enc-figs{
+      width: 20%;
+      height: 6px;
+      background-color: snow;
+      margin-bottom: 45px;
+      box-shadow: 0 0 5px #000;
+    }
+    .seleccion{
+      background-size: cover;
+      background-blend-mode:hard-light;
+      background-image: url('/assets/imagenes/tela desaturada.jpg');
+      position:relative;
+      box-shadow: 10px 0 5px #000;
+
+      .pais-info{
+        width: 100%;
+        height: 200px;
+        color: snow;
+        font-family: 'qatar';
+        font-size: 6.5vw;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        text-shadow: 5px 5px 0px #000;
+
+        .etiqueta{
+          width: auto;
+          min-width: 50vw;
+          height: 150px;
+          padding-right: 35px;
+          position: absolute;
+          border-radius: 10px;
+          box-shadow: 5px 5px 0 #000;
+          left: 0;
+          background:  linear-gradient(45deg, #5e0525 0%, rgb(134, 57, 57) 85%);
+          display: flex;
+          align-items: center;
+
+          .bandera{
+            width: 150px;
+            height: 150px;
+            border: solid snow 10px;
+            border-radius: 10px;
+            //transform: rotateZ(45deg);
+            background-color: snow;
+            margin: 50px;
+            box-shadow: 5px 5px 0px #000, inset 0px 0px 10px #000;
+
+            z-index: 1;
+            background-size: cover;
+            background-position: center center;
+
+          }
+
+          span{
+            z-index: 1;
+          }
+        }
+      }
+
+      .iniciales{
+        font-size: 250px;
+        position: absolute;
+        left: 10px;
+        bottom: -280px;
+        z-index: -1;
+      }
+    }
+  }
+
+ .album::after{
+  content: "";
+  flex: auto;
+ }
+
+}

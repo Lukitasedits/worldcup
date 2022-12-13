@@ -1,0 +1,73 @@
+
+.fondo{
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: url('/assets/wallpapers/Trofeo.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .album{
+    cursor: pointer;
+    width: 500px;
+    height: 500px;
+    background-image: url('/assets/imagenes/Album.png');
+    background-size: cover;
+    transition: 0.2s all;
+    filter:drop-shadow(2px 2px 2px rgb(0, 0, 0));
+  }
+
+  .album:hover{
+    transform: translateY(-10px);
+    filter:drop-shadow(2px 5px 2px rgb(0, 0, 0));
+  }
+
+  app-porcentaje{
+    left: 0;
+    margin: 40px;
+  }
+
+  app-proximo-partido{
+    position: absolute;
+    right: 0;
+    margin: 40px;
+  }
+}
+
+.transición{
+  width: 150vw;
+  height: 100vh;
+  background-color: #5e0525;
+  mask: url('/assets/imagenes/Bandera Qatar mask.png');
+  mask-size: cover;
+  mask-repeat:repeat-y;
+  position: absolute;
+  right: -150%;
+  transition: 1s all ease-out;
+  display: none;
+}
+
+@media (min-width: 1150px) {
+  app-porcentaje{
+    position: absolute;
+  }
+}
+
+@media (max-width: 1150px) {
+  app-proximo-partido{
+    display: none;
+  }
+
+  .fondo{
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 900px) {
+  app-porcentaje{
+    display: none;
+  }
+}
